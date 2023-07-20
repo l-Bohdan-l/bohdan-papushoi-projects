@@ -11,6 +11,7 @@ import {
   UserWrapper,
   UserGreetings,
   LogoutBtn,
+  LinkStyled,
 } from "./ContactsHeader.styled";
 import { useDispatch } from "react-redux";
 import { useAuth } from "../../../redux/hooks/useAuth";
@@ -30,6 +31,7 @@ export function ContactsHeader() {
   return (
     <HeaderContainer>
       <Nav>
+        <LinkStyled to="/">to Main Page</LinkStyled>
         <NavLinkStyled to="/phonebook">Home</NavLinkStyled>
         {isLoggedIn && <NavLinkStyled to="contacts">Contacts</NavLinkStyled>}
       </Nav>
