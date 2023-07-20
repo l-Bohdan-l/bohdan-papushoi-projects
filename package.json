@@ -1,7 +1,11 @@
 {
   "name": "bohdan-papushoi-projects",
   "version": "0.1.0",
-  "homepage": "https://l-bohdan-l.github.io/bohdan-papushoi-projects/",
+  "homepage": "https://l-bohdan-l.github.io/bohdan-papushoi-projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bohdan-papushoi-projects"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
