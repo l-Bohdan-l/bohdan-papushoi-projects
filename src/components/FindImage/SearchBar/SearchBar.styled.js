@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 export const SearchBarStyled = styled.header`
   top: 0;
@@ -17,22 +18,20 @@ export const SearchBarStyled = styled.header`
   background-color: #3f51b5;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-
-
 `;
 
 export const SearchForm = styled.form`
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    background-color: #fff;
-    border-radius: 3px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
 `;
 
 export const SearchFormButton = styled.button`
-    display: inline-block;
+  display: inline-block;
   width: 48px;
   height: 48px;
   border: 0;
@@ -48,7 +47,7 @@ export const SearchFormButton = styled.button`
 `;
 
 export const SearchFormButtonLabel = styled.span`
-    position: absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -59,8 +58,8 @@ export const SearchFormButtonLabel = styled.span`
   border: 0;
 `;
 
-export const SearchFormInput = styled.input`    
-    display: inline-block;
+export const SearchFormInput = styled.input`
+  display: inline-block;
   width: 100%;
   font: inherit;
   font-size: 20px;
@@ -68,4 +67,30 @@ export const SearchFormInput = styled.input`
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
+`;
+
+export const GoBackBtn = styled(Link)`
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  margin: 0;
+  background-color: transparent;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 3px 3px 3px;
+  margin-right: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-align: center;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  outline: none;
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: #3f51b5;
+  }
 `;

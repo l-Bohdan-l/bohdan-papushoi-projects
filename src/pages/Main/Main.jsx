@@ -1,14 +1,15 @@
-import { Section } from "./Main.styled";
+import { Link } from "react-router-dom";
+import { List, Section } from "./Main.styled";
 
 export default function Main() {
   return (
     <Section>
       <h1>Choose project</h1>
-      <ul>
-        <li>Find Image</li>
-        <li>Movies</li>
-        <li>Phone book</li>
-      </ul>
+      <List>
+        <Link to="/images-search">Find Image</Link>
+        <Link to="/movie-gallery">Movies</Link>
+        <Link to="/phonebook">Phone book</Link>
+      </List>
     </Section>
   );
 }
