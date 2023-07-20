@@ -29,102 +29,108 @@ const ContactPage = lazy(() => import("./pages/Contacts/ContactPage"));
 const LoginPage = lazy(() => import("./pages/Contacts/LoginPage"));
 const Registration = lazy(() => import("./pages/Contacts/Registration"));
 
-let router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Main />,
-    errorElement: <Error />,
-    children: [
-      //   {
-      //     // loader: () => import("./pages/Home"),
-      //     element: <PublicRoute component={Home} />,
-      //     index: true,
-      //   },
-      //   {
-      //     path: "contacts",
-      //     // loader: () => import("./pages/Movies"),
-      //     element: <PrivateRoute component={ContactPage} redirectTo="/login" />,
-      //   },
-    ],
-  },
-  {
-    path: "/images-search",
-    element: <ImageSearch />,
-  },
-  {
-    path: "/movie-gallery",
-    element: <SharedLayout />,
-    children: [
-      {
-        element: <TrendingMovies />,
-        index: true,
-      },
-      {
-        path: "movies",
-        element: <MovieSearch />,
-      },
-      {
-        path: "movies/:movieId",
-        // loader: () => import("./pages/MovieDetailPage"),
-        element: <MovieDetailPage />,
-        children: [
-          {
-            path: "cast",
-            // loader: () => import("./pages/Cast"),
-            element: <Cast />,
-          },
-          {
-            path: "reviews",
-            // loader: () => import("./pages/Reviews"),
-            element: <Reviews />,
-          },
-        ],
-      },
-    ],
-  },
-  {
-    path: "/phonebook",
-    element: <SharedLayout />,
-    children: [
-      {
-        // loader: () => import("./pages/Home"),
-        element: <PublicRoute component={Home} />,
-        index: true,
-      },
-      {
-        path: "contacts",
-        // loader: () => import("./pages/Movies"),
-        element: (
-          <PrivateRoute component={ContactPage} redirectTo="/phonebook/login" />
-        ),
-      },
-      {
-        path: "login",
-        element: (
-          <PublicRoute
-            restricted
-            component={LoginPage}
-            redirectTo="/phonebook/contacts"
-          />
-        ),
-      },
-      {
-        path: "register",
-        element: (
-          <PublicRoute
-            restricted
-            component={Registration}
-            redirectTo="/phonebook$ npm install gh-pages --save-dev/contacts"
-          />
-        ),
-      },
-    ],
-  },
-  {
-    path: "*",
-    element: <Error />,
-  },
-]);
+let router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Main />,
+      errorElement: <Error />,
+      children: [
+        //   {
+        //     // loader: () => import("./pages/Home"),
+        //     element: <PublicRoute component={Home} />,
+        //     index: true,
+        //   },
+        //   {
+        //     path: "contacts",
+        //     // loader: () => import("./pages/Movies"),
+        //     element: <PrivateRoute component={ContactPage} redirectTo="/login" />,
+        //   },
+      ],
+    },
+    {
+      path: "/images-search",
+      element: <ImageSearch />,
+    },
+    {
+      path: "/movie-gallery",
+      element: <SharedLayout />,
+      children: [
+        {
+          element: <TrendingMovies />,
+          index: true,
+        },
+        {
+          path: "movies",
+          element: <MovieSearch />,
+        },
+        {
+          path: "movies/:movieId",
+          // loader: () => import("./pages/MovieDetailPage"),
+          element: <MovieDetailPage />,
+          children: [
+            {
+              path: "cast",
+              // loader: () => import("./pages/Cast"),
+              element: <Cast />,
+            },
+            {
+              path: "reviews",
+              // loader: () => import("./pages/Reviews"),
+              element: <Reviews />,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      path: "/phonebook",
+      element: <SharedLayout />,
+      children: [
+        {
+          // loader: () => import("./pages/Home"),
+          element: <PublicRoute component={Home} />,
+          index: true,
+        },
+        {
+          path: "contacts",
+          // loader: () => import("./pages/Movies"),
+          element: (
+            <PrivateRoute
+              component={ContactPage}
+              redirectTo="/phonebook/login"
+            />
+          ),
+        },
+        {
+          path: "login",
+          element: (
+            <PublicRoute
+              restricted
+              component={LoginPage}
+              redirectTo="/phonebook/contacts"
+            />
+          ),
+        },
+        {
+          path: "register",
+          element: (
+            <PublicRoute
+              restricted
+              component={Registration}
+              redirectTo="/phonebook$ npm install gh-pages --save-dev/contacts"
+            />
+          ),
+        },
+      ],
+    },
+    {
+      path: "*",
+      element: <Error />,
+    },
+  ],
+  { basename: "/bohdan-papushoi-projects" }
+);
 
 function App() {
   const { token } = useAuth();

@@ -24,12 +24,12 @@ const TrendingMovies = function () {
     fetchPopularMovies()
       .then((data) => {
         setMovies(data);
-        console.log(data);
+        // console.log(data);
       })
       .catch((error) => setError(error))
       .finally(() => setIsLoading(Status.RESOLVED));
   }, []);
-  console.log("movies", movies);
+  // console.log("movies", movies);
   return (
     <article>
       <Title>Trending Today</Title>

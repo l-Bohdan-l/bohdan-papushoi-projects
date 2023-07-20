@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { LinkStyled, List, Section, Title } from "./Main.styled";
 
 export default function Main() {

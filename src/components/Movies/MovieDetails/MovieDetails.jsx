@@ -24,22 +24,22 @@ const MovieDetails = () => {
   const [status, setStatus] = useState(Status.IDLE);
 
   const location = useLocation();
-  console.log("location movie", location);
+  // console.log("location movie", location);
   const backLinkRef = useRef(location.state?.from ?? "/movie-gallery");
   const transitionDuration = 300;
 
   useEffect(() => {
-    console.log("useEffect");
+    // console.log("useEffect");
     setStatus(Status.PENDING);
     fetchMovieDetails(id)
       .then(setMovie)
       .catch((error) => setError(error))
       .finally(() => setStatus(Status.RESOLVED));
-    console.log("useEffect");
+    // console.log("useEffect");
   }, [id]);
 
-  console.log("movieId", movieId, "id", id);
-  console.log("movie", movie);
+  // console.log("movieId", movieId, "id", id);
+  // console.log("movie", movie);
   // const { original_title, poster_path, overview, genres, vote_average } = movie;
   return (
     <section>

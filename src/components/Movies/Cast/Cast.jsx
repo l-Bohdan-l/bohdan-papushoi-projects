@@ -21,7 +21,7 @@ function Cast() {
             .catch(error => setError(error))
             .finally(() => setStatus(Status.RESOLVED));
     }, [id]);
-    console.log('cast', cast)
+    // console.log('cast', cast)
     return (
         <div>
             {status === Status.PENDING && <ColorRing

@@ -20,7 +20,7 @@ export function ContactsHeader() {
   const { isLoggedIn, token } = useAuth();
   const dispatch = useDispatch();
   const [logout] = useLogoutMutation();
-  console.log("isLoggedIn", isLoggedIn);
+  // console.log("isLoggedIn", isLoggedIn);
   // const { authName } = useAuth();
   const { data } = useGetCurrentUserQuery(undefined, { skip: !token });
 

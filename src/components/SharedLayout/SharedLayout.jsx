@@ -8,7 +8,7 @@ import { Container } from "../Container/Container";
 
 export function SharedLayout() {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   return (
     <>
       {location.pathname.includes("/movie-gallery") && <MovieHeader />}
