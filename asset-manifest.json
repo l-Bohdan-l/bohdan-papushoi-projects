@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bohdan-papushoi-projects/static/css/main.f6b1ebe9.css",
-    "main.js": "/bohdan-papushoi-projects/static/js/main.ae9bbc7e.js",
+    "main.js": "/bohdan-papushoi-projects/static/js/main.35eb354d.js",
     "static/js/25.72e6568f.chunk.js": "/bohdan-papushoi-projects/static/js/25.72e6568f.chunk.js",
     "static/js/33.3ad4f82f.chunk.js": "/bohdan-papushoi-projects/static/js/33.3ad4f82f.chunk.js",
     "static/js/996.72f98bb9.chunk.js": "/bohdan-papushoi-projects/static/js/996.72f98bb9.chunk.js",
@@ -13,7 +13,7 @@
     "static/media/movie_placeholder.png": "/bohdan-papushoi-projects/static/media/movie_placeholder.bf30f55db9857df30364.png",
     "index.html": "/bohdan-papushoi-projects/index.html",
     "main.f6b1ebe9.css.map": "/bohdan-papushoi-projects/static/css/main.f6b1ebe9.css.map",
-    "main.ae9bbc7e.js.map": "/bohdan-papushoi-projects/static/js/main.ae9bbc7e.js.map",
+    "main.35eb354d.js.map": "/bohdan-papushoi-projects/static/js/main.35eb354d.js.map",
     "25.72e6568f.chunk.js.map": "/bohdan-papushoi-projects/static/js/25.72e6568f.chunk.js.map",
     "33.3ad4f82f.chunk.js.map": "/bohdan-papushoi-projects/static/js/33.3ad4f82f.chunk.js.map",
     "996.72f98bb9.chunk.js.map": "/bohdan-papushoi-projects/static/js/996.72f98bb9.chunk.js.map",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.f6b1ebe9.css",
-    "static/js/main.ae9bbc7e.js"
+    "static/js/main.35eb354d.js"
   ]
 }
