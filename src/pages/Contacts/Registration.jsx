@@ -4,6 +4,7 @@ import SendIcon from "@mui/icons-material/Send";
 import { RegistrationForm } from "./Registration.styled";
 import { setCredentials, useRegisterMutation } from "../../redux/authSlice";
 import { useDispatch } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
 
 function Registration() {
   const [registerUser, { data, error }] = useRegisterMutation();
@@ -15,10 +16,20 @@ function Registration() {
   };
   const handleSubmit = async (values) => {
     try {
+      if (values.password.length < 7) {
+        toast.error("Password min length - 7");
+        return;
+      }
       const user = await registerUser(values).unwrap();
       dispatch(setCredentials(user));
     } catch (e) {
-      console.log("error", e.data.message);      
+      console.log("e", e);
+      if (e.data.code === 11000) {
+        toast.error("Email is already registered");
+        return;
+      }
+      console.log("error msg", e);
+      toast.error(e.data.message);
     }
   };
 
@@ -46,7 +57,6 @@ function Registration() {
           as={TextField}
           label="password"
           variant="standard"
-          min="7"
         />
         <Button type="submit" variant="contained" endIcon={<SendIcon />}>
           Send
