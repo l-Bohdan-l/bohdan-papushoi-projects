@@ -18,7 +18,7 @@ function Registration() {
       const user = await registerUser(values).unwrap();
       dispatch(setCredentials(user));
     } catch (e) {
-      console.log(error);
+      console.log("error", e.data.message);      
     }
   };
 
@@ -46,6 +46,7 @@ function Registration() {
           as={TextField}
           label="password"
           variant="standard"
+          min="7"
         />
         <Button type="submit" variant="contained" endIcon={<SendIcon />}>
           Send
